@@ -69,7 +69,7 @@ router.post('/:id/posts', validateUserId, validatePost, async (req, res, next) =
       user_id: req.params.id,
       text: req.text,
     })
-    res.json(201).json(result)
+    res.status(201).json(result)
   }
   catch(err){
     next(err)
